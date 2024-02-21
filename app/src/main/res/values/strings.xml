@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">GlueVis_3.0</string>
+    <string name="input_a_bottom"><font size = "55">Ievadiet APAKŠĒJĀS daļas svaru</font></string>
+    <string name="input_b_top"><font size = "55">Ievadiet AUGŠĒJĀS daļas svaru</font></string>
+    <string name="left">Pa kreisi</string>
+    <string name="center">Pa vidu</string>
+    <string name="right">Pa labi</string>
+    <string name="with_glue">Ar līmi</string>
+    <string name="no_value_entered">Nav ievadīta vērtība</string>
+    <string name="bottom" translatable="false">Apakšā</string>
+    <string name="top" translatable="false">Augšā</string>
+    <string name="_0_0" translatable="false">0.0</string>
+    <string name="g_m2">g/m2</string>
+    <string name="glue_measurement">Glue measurement</string>
+    <string name="calculate">Aprēķināt</string>
+    <string name="no_glue">Nav līmēs</string>
+
+
+
+</resources>
