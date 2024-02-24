@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">GlueVis_3.0</string>
-    <string name="input_a_bottom"><font size = "55">Ievadiet APAKŠĒJĀS daļas svaru</font></string>
-    <string name="input_b_top"><font size = "55">Ievadiet AUGŠĒJĀS daļas svaru</font></string>
+    <string name="app_name">GlueVis_4.0</string>
+    <string name="input_a_bottom"><font size = "44">Ievadiet APAKŠĒJĀS daļas svaru</font></string>
+    <string name="input_b_top"><font size = "44">Ievadiet AUGŠĒJĀS daļas svaru</font></string>
     <string name="left">Pa kreisi</string>
     <string name="center">Pa vidu</string>
     <string name="right">Pa labi</string>
@@ -14,7 +14,8 @@
     <string name="glue_measurement">Glue measurement</string>
     <string name="calculate">Aprēķināt</string>
     <string name="no_glue">Nav līmēs</string>
-
+    <string name="take_a_screenshot">uzņemiet ekrānuzņēmumu un nosūtiet</string>
+    <string name="The_screenshot_has_been_saved">Ekrānuzņēmums ir saglabāts galerijā</string>
 
 
 </resources>

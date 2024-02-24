@@ -1,5 +1,6 @@
 package com.example.testapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.util.Log
 import android.view.View
 import com.example.testapp.databinding.ActivityMain2Binding
 import com.example.testapp.databinding.ActivityMainBinding
+import java.lang.String
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -61,32 +63,59 @@ class MainActivity2 : AppCompatActivity() {
 
 
     }
-    fun onClick(view: View){
-        val a = binding.editTextA.text.toString().toDouble()
-        val b = binding.editTextB.text.toString().toDouble()
-        val c = binding.editTextC.text.toString().toDouble()
-        val d = binding.editTextD.text.toString().toDouble()
-        val e = binding.editTextE.text.toString().toDouble()
-        val f = binding.editTextF.text.toString().toDouble()
+    @SuppressLint("DefaultLocale")
+    fun onClick(view: View) {
+        if (!isFieldEmpty()) {
+            val a = binding.editTextA.text.toString().toDouble()
+            val b = binding.editTextB.text.toString().toDouble()
+            val c = binding.editTextC.text.toString().toDouble()
+            val d = binding.editTextD.text.toString().toDouble()
+            val e = binding.editTextE.text.toString().toDouble()
+            val f = binding.editTextF.text.toString().toDouble()
 
-        a2 = (a -a1)
-        b2 = (b -b1)
-        c2 = (c -c1)
-        d2 = (d -d1)
-        e2 = (e -e1)
-        f2 = (f -f1)
+            a2 = (a - a1)*const
+            b2 = (b - b1)*const
+            c2 = (c - c1)*const
+            d2 = (d - d1)*const
+            e2 = (e - e1)*const
+            f2 = (f - f1)*const
 
-        Log.d("MyLog", "$a2, $b2, $c2" )
+            val aaaa = String.format("%.2f", a2)
+            val bbbb = String.format("%.2f", b2)
+            val cccc = String.format("%.2f", c2)
+            val dddd = String.format("%.2f", d2)
+            val eeee = String.format("%.2f", e2)
+            val ffff = String.format("%.2f", f2)
 
-        val intent = Intent(this, MainActivity3::class.java)
-        intent.putExtra("message7", a2.toString())
-        intent.putExtra("message8", b2.toString())
-        intent.putExtra("message9", c2.toString())
-        intent.putExtra("message10", d2.toString())
-        intent.putExtra("message11", e2.toString())
-        intent.putExtra("message12", f2.toString())
-        startActivity(intent)
 
+
+
+            val intent = Intent(this, MainActivity3::class.java)
+            intent.putExtra("message7", aaaa.toString())
+            intent.putExtra("message8", bbbb.toString())
+            intent.putExtra("message9", cccc.toString())
+            intent.putExtra("message10", dddd.toString())
+            intent.putExtra("message11",eeee.toString())
+            intent.putExtra("message12", ffff.toString())
+            startActivity(intent)
+
+
+        }
+    }
+
+    private fun isFieldEmpty(): Boolean {
+        binding.apply {// apply даёт возможность прикрепить к binding несколько активностей
+            if (editTextA.text.isNullOrEmpty()) editTextA.error = getString(R.string.no_value_entered)
+            if (editTextB.text.isNullOrEmpty()) editTextB.error = getString(R.string.no_value_entered)
+            if (editTextC.text.isNullOrEmpty()) editTextC.error = getString(R.string.no_value_entered)
+            if (editTextD.text.isNullOrEmpty()) editTextD.error = getString(R.string.no_value_entered)
+            if (editTextE.text.isNullOrEmpty()) editTextE.error = getString(R.string.no_value_entered)
+            if (editTextF.text.isNullOrEmpty()) editTextF.error = getString(R.string.no_value_entered)
+
+
+            return editTextA.text.isNullOrEmpty() || editTextB.text.isNullOrEmpty() || editTextC.text.isNullOrEmpty()
+                    || editTextD.text.isNullOrEmpty() || editTextE.text.isNullOrEmpty() || editTextF.text.isNullOrEmpty()
+        }
 
     }
 }

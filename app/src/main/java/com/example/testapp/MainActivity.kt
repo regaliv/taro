@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun onClick(view: View){
-
+    if (!isFieldEmpty()) {
         val a = binding.editTextA.text.toString()
         val b = binding.editTextB.text.toString()
         val c = binding.editTextC.text.toString()
@@ -29,8 +29,7 @@ class MainActivity : AppCompatActivity() {
         val f = binding.editTextF.text.toString()
 
 
-
-       /* val intent = Intent(this, MainActivity2::class.java)
+        /* val intent = Intent(this, MainActivity2::class.java)
         startActivity(intent)
        */
         val intent = Intent(this, MainActivity2::class.java)
@@ -41,9 +40,24 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("message5", e)
         intent.putExtra("message6", f)
 
-       startActivity(intent)
+        startActivity(intent)
+    }
+    }
 
-      
+    private fun isFieldEmpty(): Boolean {
+        binding.apply {// apply даёт возможность прикрепить к binding несколько активностей
+            if (editTextA.text.isNullOrEmpty()) editTextA.error = getString(R.string.no_value_entered)
+            if (editTextB.text.isNullOrEmpty()) editTextB.error = getString(R.string.no_value_entered)
+            if (editTextC.text.isNullOrEmpty()) editTextC.error = getString(R.string.no_value_entered)
+            if (editTextD.text.isNullOrEmpty()) editTextD.error = getString(R.string.no_value_entered)
+            if (editTextE.text.isNullOrEmpty()) editTextE.error = getString(R.string.no_value_entered)
+            if (editTextF.text.isNullOrEmpty()) editTextF.error = getString(R.string.no_value_entered)
+
+
+            return editTextA.text.isNullOrEmpty() || editTextB.text.isNullOrEmpty() || editTextC.text.isNullOrEmpty()
+                    || editTextD.text.isNullOrEmpty() || editTextE.text.isNullOrEmpty() || editTextF.text.isNullOrEmpty()
+        }
+
     }
 
 
