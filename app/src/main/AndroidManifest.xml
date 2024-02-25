@@ -24,12 +24,15 @@
 
         <activity
             android:name=".MainActivity3"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".MainActivity2"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
