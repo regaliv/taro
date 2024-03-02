@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.example.testapp.databinding.ActivityMainBinding
@@ -17,6 +18,11 @@ import com.google.android.material.internal.WindowUtils
 import java.lang.String
 
 class MainActivity3 : AppCompatActivity() {
+
+    private var g1= 0
+    private var g2= 0
+    private var g3= 0
+
     lateinit var binding: ActivityTestBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +36,11 @@ class MainActivity3 : AppCompatActivity() {
         val message6  = intent.getStringExtra("message12")
 
 
+
+
+
+
+
         binding.textView1.text = message1
         binding.textView2.text = message2
         binding.textView3.text = message3
@@ -37,6 +48,33 @@ class MainActivity3 : AppCompatActivity() {
         binding.textView5.text = message5
         binding.textView6.text = message6
 
+        var message7  = intent.getStringExtra("key1")
+        val message8  = intent.getStringExtra("key2")
+        val message9  = intent.getStringExtra("key3")
+
+        if (message7 != null) {
+            g1=message7.toInt()
+        }
+        if (message8 != null) {
+            g2=message8.toInt()
+        }
+        if (message9 != null) {
+            g3=message9.toInt()
+        }
+
+        Log.d("MyLog", " $message7")
+        Log.d("MyLog", "$message8")
+        Log.d("MyLog", "$message9")
+
+        if (g1==1 && g2 == 0 && g3 == 0){
+            binding.pv2.text = "POLIFOMS"
+        }
+        if (g1==0 && g2 == 1 && g3 == 0){
+            binding.pv2.text = "PPL/HPL"
+        }
+        if (g1==0 && g2 == 0 && g3 == 1){
+            binding.pv2.text = "SKAIDA"
+        }
 
     }
 

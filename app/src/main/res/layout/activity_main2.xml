@@ -35,6 +35,8 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView15">
@@ -43,9 +45,11 @@
                 android:id="@+id/editTextA"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="22sp"
+                android:textColor="@color/black"
                 android:hint="@string/input_a_bottom"
                 android:inputType="number|numberDecimal"
-                android:textSize="16sp" />
+                 />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -55,6 +59,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            app:boxBackgroundColor="@color/white"
             app:boxStrokeColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -64,9 +69,11 @@
                 android:id="@+id/editTextB"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="22sp"
+                android:textColor="@color/black"
                 android:hint="@string/input_b_top"
                 android:inputType="number|numberDecimal"
-                android:textSize="16sp" />
+                />
         </com.google.android.material.textfield.TextInputLayout>/>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -76,6 +83,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            app:boxBackgroundColor="@color/white"
             app:boxStrokeColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -85,9 +93,11 @@
                 android:id="@+id/editTextC"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="22sp"
+                android:textColor="@color/black"
                 android:hint="@string/input_a_bottom"
                 android:inputType="number|numberDecimal"
-                android:textSize="16sp" />
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -97,6 +107,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            app:boxBackgroundColor="@color/white"
             app:boxStrokeColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -106,9 +117,11 @@
                 android:id="@+id/editTextD"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="22sp"
+                android:textColor="@color/black"
                 android:hint="@string/input_b_top"
                 android:inputType="number|numberDecimal"
-                android:textSize="16sp" />
+                 />
         </com.google.android.material.textfield.TextInputLayout>/>
 
 
@@ -119,6 +132,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            app:boxBackgroundColor="@color/white"
             app:boxStrokeColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -128,9 +142,11 @@
                 android:id="@+id/editTextE"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="22sp"
+                android:textColor="@color/black"
                 android:hint="@string/input_a_bottom"
                 android:inputType="number|numberDecimal"
-                android:textSize="16sp" />
+                 />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -141,6 +157,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             app:boxStrokeColor="@color/black"
+            app:boxBackgroundColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TextInputLayout5">
@@ -149,19 +166,27 @@
                 android:id="@+id/editTextF"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="22sp"
+                android:textColor="@color/black"
                 android:hint="@string/input_b_top"
                 android:inputType="number|numberDecimal"
-                android:textSize="16sp" />
-        </com.google.android.material.textfield.TextInputLayout>/>
+                />
+        </com.google.android.material.textfield.TextInputLayout><![CDATA[/>
 
-        <Button
+        ]]>
+
+        <android.widget.Button
             android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="53dp"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="16dp"
             android:onClick="onClick"
+            android:background="@drawable/gridle"
             android:text="@string/calculate"
+            android:textSize="22sp"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/TextInputLayout6" />
 
@@ -169,7 +194,7 @@
             android:id="@+id/textView22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="8dp"
             android:text="@string/center"
             android:textColor="@color/black"
             android:textSize="20sp"
@@ -197,7 +222,6 @@
             android:id="@+id/textView24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_marginTop="2dp"
             android:textColor="@color/black"
             android:textSize="20sp"

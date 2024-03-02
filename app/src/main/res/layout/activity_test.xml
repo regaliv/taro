@@ -5,7 +5,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9F6363"
+    android:background="@drawable/gridle6"
     android:id="@+id/box">
 
 
@@ -13,9 +13,47 @@
         android:id="@+id/CL1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#9F6363"
+        android:background="@drawable/gridle6"
         tools:ignore="MissingConstraints">
-    <TextView
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20sp"
+            android:background="@color/design_default_color_surface"
+
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+            >
+
+            <TextView
+                android:id="@+id/pv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="30dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                android:text="@string/pārklājuma_veids">
+
+            </TextView>
+            <TextView
+                android:id="@+id/pv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="@string/pārklājuma_veids">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <TextView
         android:id="@+id/textView77"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,7 +88,7 @@
 
             android:text="@string/bottom"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +128,7 @@
 
             android:text="@string/top"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -146,7 +184,7 @@
             android:layout_marginStart="35dp"
             android:text="@string/bottom"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -241,7 +279,7 @@
             android:layout_marginStart="35dp"
             android:text="@string/bottom"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -280,7 +318,7 @@
             android:layout_marginStart="37dp"
             android:text="@string/top"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -305,12 +343,12 @@
             android:id="@+id/LLvert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="80dp"
             android:orientation="vertical"
-
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
             app:layout_constraintBottom_toBottomOf="@+id/CL1"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
 
 
             <TextView
@@ -318,7 +356,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="10dp"
                 android:text="Poliforms"
                 android:textColor="@color/black" />
 
@@ -346,13 +384,13 @@
             android:id="@+id/LLvert2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:layout_marginBottom="80dp"
             android:orientation="vertical"
-
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
             app:layout_constraintBottom_toBottomOf="@+id/CL1"
             app:layout_constraintEnd_toEndOf="parent"
-            >
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
 
 
             <TextView
@@ -360,7 +398,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="10dp"
                 android:text="100-110g/m²"
                 android:textColor="@color/black" />
 
@@ -383,15 +421,17 @@
                 android:textColor="@color/black" />
         </LinearLayout>
 
-        <Button
+        <android.widget.Button
             android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="200dp"
-
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/col_grey"
             android:onClick="onClick"
             android:text="@string/take_a_screenshot"
+            android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout8" />

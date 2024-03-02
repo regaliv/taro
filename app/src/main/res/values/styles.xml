@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style
+        name="AppTheme"
+        parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="textInputStyle" >@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+
+
+
+
+    </style>
+
+    <style name="TextAppearance.AppCompat.TextInputLayout"
+        parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+    </style>
+
+
+</resources>

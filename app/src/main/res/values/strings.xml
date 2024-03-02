@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">GlueVis_4.0</string>
-    <string name="input_a_bottom"><font size = "44">Ievadiet APAKŠĒJĀS daļas svaru</font></string>
-    <string name="input_b_top"><font size = "44">Ievadiet AUGŠĒJĀS daļas svaru</font></string>
+    <string name="input_a_bottom"><font size="44">Ievadiet APAKŠĒJĀS daļas svaru</font></string>
+    <string name="input_b_top"><font size="44">Ievadiet AUGŠĒJĀS daļas svaru</font></string>
     <string name="left">Pa kreisi</string>
     <string name="center">Pa vidu</string>
     <string name="right">Pa labi</string>
@@ -16,6 +16,13 @@
     <string name="no_glue">Nav līmēs</string>
     <string name="take_a_screenshot">uzņemiet ekrānuzņēmumu un nosūtiet</string>
     <string name="The_screenshot_has_been_saved">Ekrānuzņēmums ir saglabāts galerijā</string>
+    <string name="todo">TODO</string>
+    <string name="todo2">TODO</string>
+    <string name="poliform">Poliforms</string>
+    <string name="PPL_HPL">PPL/HPL</string>
+    <string name="skaida">Skaida</string>
+    <string name="pārklājuma_veids">Pārklājuma veids:</string>
+    <string name="izvēlieties_pašreizējo_pārklājuma_veidu">Izvēlieties pašreizējo pārklājuma veidu</string>
 
 
 </resources>

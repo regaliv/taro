@@ -19,6 +19,10 @@ class MainActivity2 : AppCompatActivity() {
     private var e1=0.0
     private var f1=0.0
 
+    private var g1=0
+    private var g2=0
+    private var g3=0
+
     private var a2 = 0.0
     private var b2 = 0.0
     private var c2 = 0.0
@@ -42,6 +46,14 @@ class MainActivity2 : AppCompatActivity() {
         val message5  = intent.getStringExtra("message5")
         val message6  = intent.getStringExtra("message6")
 
+        val message7  = intent.getStringExtra("key1")
+        val message8  = intent.getStringExtra("key2")
+        val message9  = intent.getStringExtra("key3")
+
+         Log.d("MyLog"," 2 $message7")
+         Log.d("MyLog"," 2 $message8")
+         Log.d("MyLog"," 2 $message9")
+
         if (message1 != null) {
             a1=message1.toDouble()
         }
@@ -61,10 +73,27 @@ class MainActivity2 : AppCompatActivity() {
             f1=message6.toDouble()
         }
 
+        if (message7 != null) {
+            g1=message7.toInt()
+        }
+        if (message8 != null) {
+            g2=message8.toInt()
+        }
+        if (message9 != null) {
+            g3=message9.toInt()
+        }
+
+        Log.d("MyLog"," q1 $g1")
+        Log.d("MyLog"," q1 $g2")
+        Log.d("MyLog"," q1 $g3")
+
+
 
     }
     @SuppressLint("DefaultLocale")
     fun onClick(view: View) {
+
+
         if (!isFieldEmpty()) {
             val a = binding.editTextA.text.toString().toDouble()
             val b = binding.editTextB.text.toString().toDouble()
@@ -97,9 +126,33 @@ class MainActivity2 : AppCompatActivity() {
             intent.putExtra("message10", dddd.toString())
             intent.putExtra("message11",eeee.toString())
             intent.putExtra("message12", ffff.toString())
+
+            intent.putExtra("key1", g1.toString())
+            intent.putExtra("key2", g2.toString())
+            intent.putExtra("key3", g3.toString())
             startActivity(intent)
 
+           // isTest()
 
+
+        }
+    }
+
+    fun isTest(){
+        if (g1==1){
+            val intent = Intent(this, MainActivity3::class.java)
+            intent.putExtra("key1", "POLIFORMS")
+            startActivity(intent)
+        }
+        if (g1==2){
+            val intent = Intent(this, MainActivity3::class.java)
+            intent.putExtra("key1", "HPL_PPL")
+            startActivity(intent)
+        }
+        if (g1==3){
+            val intent = Intent(this, MainActivity3::class.java)
+            intent.putExtra("key1", "SKAIDA")
+            startActivity(intent)
         }
     }
 
