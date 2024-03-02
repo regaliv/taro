@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GlueVis_4.0</string>
+    <string name="app_name">ORMA</string>
     <string name="input_a_bottom"><font size="44">Ievadiet APAKŠĒJĀS daļas svaru</font></string>
     <string name="input_b_top"><font size="44">Ievadiet AUGŠĒJĀS daļas svaru</font></string>
     <string name="left">Pa kreisi</string>
