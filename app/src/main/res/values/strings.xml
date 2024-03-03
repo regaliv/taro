@@ -23,6 +23,7 @@
     <string name="skaida">Skaida</string>
     <string name="pārklājuma_veids">Pārklājuma veids:</string>
     <string name="izvēlieties_pašreizējo_pārklājuma_veidu">Izvēlieties pašreizējo pārklājuma veidu</string>
+    <string name="button">Button</string>
 
 
 </resources>

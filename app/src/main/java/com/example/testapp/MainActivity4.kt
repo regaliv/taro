@@ -3,6 +3,7 @@ package com.example.testapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import com.example.testapp.databinding.ActivityMain3Binding
 import com.example.testapp.databinding.ActivityMain4Binding
@@ -15,6 +16,14 @@ class MainActivity4 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityMain4Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val button = findViewById<View>(R.id.button6)
+        button.setOnClickListener {
+            Log.d("MyLog","Oksss")
+
+            val intent = Intent(this@MainActivity4,MainActivity5::class.java)
+            startActivity(intent)
+        }
     }
 
     fun onClick1(view: View){
