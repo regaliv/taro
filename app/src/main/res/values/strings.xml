@@ -21,9 +21,15 @@
     <string name="poliform">Poliforms</string>
     <string name="PPL_HPL">PPL/HPL</string>
     <string name="skaida">Skaida</string>
+    <string name="pf_M">pf>2.1</string>
     <string name="pārklājuma_veids">Pārklājuma veids:</string>
-    <string name="izvēlieties_pašreizējo_pārklājuma_veidu">Izvēlieties pašreizējo pārklājuma veidu</string>
+    <string name="izvēlieties_pašreizējo_pārklājuma_veidu">Izvēlieties pašreizējo\n  pārklājuma veidu:</string>
     <string name="button">Button</string>
+    <string name="kopa">Kopā:</string>
+    <string name="stundas">Stundas</string>
+    <string name="oper">Oper</string>
+    <string name="pal">Palīgs</string>
+    <string name="_0">0</string>
 
 
 </resources>

@@ -286,17 +286,6 @@ class MainActivity3 : AppCompatActivity() {
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
         Log.d("MyLog", " $message7")
         Log.d("MyLog", "$message8")
         Log.d("MyLog", "$message9")

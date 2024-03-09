@@ -102,12 +102,12 @@ class MainActivity2 : AppCompatActivity() {
             val e = binding.editTextE.text.toString().toDouble()
             val f = binding.editTextF.text.toString().toDouble()
 
-            a2 = (a - a1)
-            b2 = (b - b1)
-            c2 = (c - c1)
-            d2 = (d - d1)
-            e2 = (e - e1)
-            f2 = (f - f1)
+            a2 = (a - a1)*const
+            b2 = (b - b1)*const
+            c2 = (c - c1)*const
+            d2 = (d - d1)*const
+            e2 = (e - e1)*const
+            f2 = (f - f1)*const
 
 
 
@@ -135,26 +135,26 @@ class MainActivity2 : AppCompatActivity() {
             intent.putExtra("key2", g2.toString())
             intent.putExtra("key3", g3.toString())
 
-            if (g1 !=0 && a2<100 || a2>110) intent.putExtra("tok1","1")
-            if (g1 !=0 && b2<100 || b2>110) intent.putExtra("tok2","1")
-            if (g1 !=0 && c2<100 || c2>110) intent.putExtra("tok3","1")
-            if (g1 !=0 && d2<100 || d2>110) intent.putExtra("tok4","1")
-            if (g1 !=0 && e2<100 || e2>110) intent.putExtra("tok5","1")
-            if (g1 !=0 && f2<100 || f2>110) intent.putExtra("tok6","1")
+            if (g1 !=0 && a2<95 || a2>115) intent.putExtra("tok1","1")
+            if (g1 !=0 && b2<95 || b2>115) intent.putExtra("tok2","1")
+            if (g1 !=0 && c2<95 || c2>115) intent.putExtra("tok3","1")
+            if (g1 !=0 && d2<95 || d2>115) intent.putExtra("tok4","1")
+            if (g1 !=0 && e2<95 || e2>115) intent.putExtra("tok5","1")
+            if (g1 !=0 && f2<95 || f2>115) intent.putExtra("tok6","1")
 
-            if (g2 !=0 && a2<85 || a2>90) intent.putExtra("tok7","1")
-            if (g2 !=0 && b2<85 || b2>90) intent.putExtra("tok8","1")
-            if (g2 !=0 && c2<85 || c2>90) intent.putExtra("tok9","1")
-            if (g2 !=0 && d2<85 || d2>90) intent.putExtra("tok10","1")
-            if (g2 !=0 && e2<85 || e2>90) intent.putExtra("tok11","1")
-            if (g2 !=0 && f2<85 || f2>90) intent.putExtra("tok12","1")
+            if (g2 !=0 && a2<80 || a2>95) intent.putExtra("tok7","1")
+            if (g2 !=0 && b2<80 || b2>95) intent.putExtra("tok8","1")
+            if (g2 !=0 && c2<80 || c2>95) intent.putExtra("tok9","1")
+            if (g2 !=0 && d2<80 || d2>95) intent.putExtra("tok10","1")
+            if (g2 !=0 && e2<80 || e2>95) intent.putExtra("tok11","1")
+            if (g2 !=0 && f2<80 || f2>95) intent.putExtra("tok12","1")
 
-            if (g3 !=0 && a2<80 || a2>90) intent.putExtra("tok13","1")
-            if (g3 !=0 && b2<80 || b2>90) intent.putExtra("tok14","1")
-            if (g3 !=0 && c2<80 || c2>90) intent.putExtra("tok15","1")
-            if (g3 !=0 && d2<80 || d2>90) intent.putExtra("tok16","1")
-            if (g3 !=0 && e2<80 || e2>90) intent.putExtra("tok17","1")
-            if (g3 !=0 && f2<80 || f2>90) intent.putExtra("tok18","1")
+            if (g3 !=0 && a2<75 || a2>95) intent.putExtra("tok13","1")
+            if (g3 !=0 && b2<75 || b2>95) intent.putExtra("tok14","1")
+            if (g3 !=0 && c2<75 || c2>95) intent.putExtra("tok15","1")
+            if (g3 !=0 && d2<75 || d2>95) intent.putExtra("tok16","1")
+            if (g3 !=0 && e2<75 || e2>95) intent.putExtra("tok17","1")
+            if (g3 !=0 && f2<75 || f2>95) intent.putExtra("tok18","1")
 
 
 
@@ -166,27 +166,7 @@ class MainActivity2 : AppCompatActivity() {
         }
     }
 
-    fun isTest(){
-        if (g1 != 0 && a2 <100 || a2 >110){
-            val intent = Intent(this, MainActivity3::class.java)
-            intent.putExtra("tok1","1")
-            startActivity(intent)
-        }else
 
-            intent.putExtra("tok1","0")
-        startActivity(intent)
-
-
-
-
-        if (g1 != 0 && b2 <100 || b2 >110){
-            val intent = Intent(this, MainActivity3::class.java)
-            intent.putExtra("tok2","1")
-            startActivity(intent)
-        }
-
-
-    }
 
     private fun isFieldEmpty(): Boolean {
         binding.apply {// apply даёт возможность прикрепить к binding несколько активностей
