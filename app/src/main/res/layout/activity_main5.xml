@@ -184,28 +184,40 @@
         app:layout_constraintEnd_toStartOf="@+id/kopa2"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="52dp"
-        android:text="@string/stundas"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl5"
+        android:layout_width="411dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="88dp"
-        android:ems="3"
-        android:hint="@string/_0"
-        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText3">
 
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/stundas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="95dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="112dp"
+            android:ems="4"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

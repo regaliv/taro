@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/gridle6"
     android:id="@+id/box">
 
@@ -18,36 +18,37 @@
 
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20sp"
             android:background="@color/black"
 
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
-            >
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
 
             <TextView
                 android:id="@+id/pv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginStart="30dp"
-                android:textSize="20sp"
+                android:layout_weight="1"
+                android:text="@string/pārklājuma_veids"
                 android:textColor="@color/white"
-                android:textStyle="italic"
-                android:text="@string/pārklājuma_veids">
+                android:textSize="20sp"
+                android:textStyle="italic">
 
             </TextView>
+
             <TextView
                 android:id="@+id/pv2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="30dp"
-                android:textSize="20sp"
-                android:textStyle="bold"
+                android:text="@string/pārklājuma_veids"
                 android:textColor="@color/white"
-                android:text="@string/pārklājuma_veids">
+                android:textSize="20sp"
+                android:textStyle="bold">
 
             </TextView>
 
@@ -343,12 +344,10 @@
             android:id="@+id/LLvert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="80dp"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="@+id/CL1"
+            app:layout_constraintBottom_toTopOf="@+id/button3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
 
             <TextView
@@ -384,13 +383,11 @@
             android:id="@+id/LLvert2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="80dp"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="@+id/CL1"
+            app:layout_constraintBottom_toTopOf="@+id/button3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
 
             <TextView

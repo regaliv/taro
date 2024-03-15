@@ -1,18 +1,12 @@
-package com.example.testapp
+package com.example.testapp.stundas
 
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.CheckBox
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.lifecycle.viewmodel.CreationExtras
+import com.example.lessonsqlitekotlin.db.MyDbManager
+import com.example.testapp.R
 import com.example.testapp.databinding.ActivityMain5Binding
-import kotlin.properties.Delegates
-import kotlin.time.times
 
 class MainActivity5 : AppCompatActivity() {
 
@@ -35,6 +29,8 @@ class MainActivity5 : AppCompatActivity() {
 
 
     lateinit var binding: ActivityMain5Binding
+
+    val myDbManager = MyDbManager(this)
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMain5Binding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)

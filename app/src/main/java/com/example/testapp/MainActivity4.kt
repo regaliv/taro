@@ -5,9 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import com.example.testapp.databinding.ActivityMain3Binding
 import com.example.testapp.databinding.ActivityMain4Binding
-import com.example.testapp.databinding.ActivityMainBinding
+import com.example.testapp.stundas.MainActivity5
 
 class MainActivity4 : AppCompatActivity() {
 
@@ -21,7 +20,7 @@ class MainActivity4 : AppCompatActivity() {
         button.setOnClickListener {
             Log.d("MyLog","Oksss")
 
-            val intent = Intent(this@MainActivity4,MainActivity5::class.java)
+            val intent = Intent(this@MainActivity4, MainActivity5::class.java)
             startActivity(intent)
         }
     }
