@@ -1,6 +1,8 @@
 package com.example.testapp.stundas
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.CheckBox
 import androidx.appcompat.app.AppCompatActivity
@@ -10,7 +12,7 @@ import com.example.testapp.databinding.ActivityMain5Binding
 
 class MainActivity5 : AppCompatActivity() {
 
-
+    val aaaa = ""
 
     val pf_c = 0.422
     val pf_c_m = 0.316
@@ -137,5 +139,13 @@ class MainActivity5 : AppCompatActivity() {
         return aaaa
 
     }
+
+    fun onClick3 (view: View){
+        val intent = Intent(this, MainActivity6::class.java)
+        intent.putExtra("key1", getResult())
+
+
+        startActivity(intent)
+
+    }
 }
-// val aaaa = String.format("%.2f", a2)

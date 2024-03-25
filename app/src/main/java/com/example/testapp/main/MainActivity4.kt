@@ -1,10 +1,11 @@
-package com.example.testapp
+package com.example.testapp.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import com.example.testapp.R
 import com.example.testapp.databinding.ActivityMain4Binding
 import com.example.testapp.stundas.MainActivity5
 

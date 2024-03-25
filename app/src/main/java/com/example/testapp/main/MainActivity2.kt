@@ -1,4 +1,4 @@
-package com.example.testapp
+package com.example.testapp.main
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -6,9 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import com.example.testapp.R
 import com.example.testapp.databinding.ActivityMain2Binding
-import com.example.testapp.databinding.ActivityMainBinding
-import java.lang.String
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -38,6 +37,8 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityMain2Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
 
         val message1  = intent.getStringExtra("message1")
         val message2  = intent.getStringExtra("message2")
@@ -73,6 +74,8 @@ class MainActivity2 : AppCompatActivity() {
             f1=message6.toDouble()
         }
 
+
+
         if (message7 != null) {
             g1=message7.toInt()
         }
@@ -94,6 +97,7 @@ class MainActivity2 : AppCompatActivity() {
     fun onClick(view: View) {
 
 
+
         if (!isFieldEmpty()) {
             val a = binding.editTextA.text.toString().toDouble()
             val b = binding.editTextB.text.toString().toDouble()
@@ -110,53 +114,23 @@ class MainActivity2 : AppCompatActivity() {
             f2 = (f - f1)*const
 
 
-
-
-
-            val aaaa = String.format("%.2f", a2)
-            val bbbb = String.format("%.2f", b2)
-            val cccc = String.format("%.2f", c2)
-            val dddd = String.format("%.2f", d2)
-            val eeee = String.format("%.2f", e2)
-            val ffff = String.format("%.2f", f2)
+            //f2 = (f - f1)*const
+            Log.d("MyLog", "a2 = $a2")
 
 
 
 
             val intent = Intent(this, MainActivity3::class.java)
-            intent.putExtra("message7", aaaa.toString())
-            intent.putExtra("message8", bbbb.toString())
-            intent.putExtra("message9", cccc.toString())
-            intent.putExtra("message10", dddd.toString())
-            intent.putExtra("message11",eeee.toString())
-            intent.putExtra("message12", ffff.toString())
+            intent.putExtra("message7", a2.toString())
+            intent.putExtra("message8", b2.toString())
+            intent.putExtra("message9", c2.toString())
+            intent.putExtra("message10",d2.toString())
+            intent.putExtra("message11",e2.toString())
+            intent.putExtra("message12",f2.toString())
 
             intent.putExtra("key1", g1.toString())
             intent.putExtra("key2", g2.toString())
             intent.putExtra("key3", g3.toString())
-
-            if (g1 !=0 && a2<95 || a2>115) intent.putExtra("tok1","1")
-            if (g1 !=0 && b2<95 || b2>115) intent.putExtra("tok2","1")
-            if (g1 !=0 && c2<95 || c2>115) intent.putExtra("tok3","1")
-            if (g1 !=0 && d2<95 || d2>115) intent.putExtra("tok4","1")
-            if (g1 !=0 && e2<95 || e2>115) intent.putExtra("tok5","1")
-            if (g1 !=0 && f2<95 || f2>115) intent.putExtra("tok6","1")
-
-            if (g2 !=0 && a2<80 || a2>95) intent.putExtra("tok7","1")
-            if (g2 !=0 && b2<80 || b2>95) intent.putExtra("tok8","1")
-            if (g2 !=0 && c2<80 || c2>95) intent.putExtra("tok9","1")
-            if (g2 !=0 && d2<80 || d2>95) intent.putExtra("tok10","1")
-            if (g2 !=0 && e2<80 || e2>95) intent.putExtra("tok11","1")
-            if (g2 !=0 && f2<80 || f2>95) intent.putExtra("tok12","1")
-
-            if (g3 !=0 && a2<75 || a2>95) intent.putExtra("tok13","1")
-            if (g3 !=0 && b2<75 || b2>95) intent.putExtra("tok14","1")
-            if (g3 !=0 && c2<75 || c2>95) intent.putExtra("tok15","1")
-            if (g3 !=0 && d2<75 || d2>95) intent.putExtra("tok16","1")
-            if (g3 !=0 && e2<75 || e2>95) intent.putExtra("tok17","1")
-            if (g3 !=0 && f2<75 || f2>95) intent.putExtra("tok18","1")
-
-
 
             startActivity(intent)
 
@@ -164,7 +138,9 @@ class MainActivity2 : AppCompatActivity() {
 
 
         }
+
     }
+
 
 
 
