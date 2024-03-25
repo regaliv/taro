@@ -30,6 +30,8 @@
     <string name="oper">Oper</string>
     <string name="pal">Palīgs</string>
     <string name="_0">0</string>
+    <string name="bt">Save\n</string>
+    <string name="save">save</string>
 
 
 </resources>

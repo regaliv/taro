@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/f"
         android:visibility="visible"
-        tools:context=".MainActivity3">
+        tools:context=".main.MainActivity3">
 
         <LinearLayout
             android:layout_width="350dp"

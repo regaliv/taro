@@ -17,6 +17,8 @@ class MyDbManager(  context: Context) {
       val values  = ContentValues().apply {
           put(MyDbNameClass.COLUMN_NAME_TITLE, title)
           put(MyDbNameClass.COLUMN_NAME_CONTENT, content)
+
+
       }
 
       db?.insert(MyDbNameClass.TABLE_NAME, null, values)
@@ -29,7 +31,9 @@ class MyDbManager(  context: Context) {
             with(cursor){
                 while (this?.moveToNext()!!){
                     val dataText = cursor?.getString(cursor.getColumnIndexOrThrow(MyDbNameClass.COLUMN_NAME_TITLE))
+                    val dataText2 = cursor?.getString(cursor.getColumnIndexOrThrow(MyDbNameClass.COLUMN_NAME_CONTENT))
                     dataList.add(dataText.toString())
+                    dataList.add(dataText2.toString())
                 }
             }
             cursor?.close()
@@ -38,5 +42,8 @@ class MyDbManager(  context: Context) {
     fun closeDB(){
         myDbHelper.close()
     }
+
+
+
 
 }

@@ -1,4 +1,4 @@
-package com.example.testapp
+package com.example.testapp.main
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import com.example.testapp.R
 import com.example.testapp.databinding.ActivityMainBinding
 
 @SuppressLint("StaticFieldLeak")
